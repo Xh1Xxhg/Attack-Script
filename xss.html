@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>KgCaptcha½ÓÈë»ã×Ü</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <iframe id="target" width="1000" height="1000"></iframe>
+
+    <script>
+        var target = document.getElementById("target");
+        target.addEventListener('load', () => {
+            target.contentWindow.postMessage('alert("ö¦×Ð")', '*')
+        })
+
+        target.src = "https://developer.volcengine.com/articles/7219604111405088828"
+    </script>
+</body>
+
+</html>

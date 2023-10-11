@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script>
+        childwin = window.open('listen.html');
+
+        function sendMessage() {
+            let msg = { pName: "attacker", pAge: "16" };
+            childwin.postMessage(msg, '*')
+        }
+
+        (function () { setTimeout("sendMessage()", 1000); }()); 
+    </script>
+</head>
+
+</html>

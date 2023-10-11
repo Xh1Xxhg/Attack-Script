@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script>
+        //添加事件监控消息
+        window.addEventListener("message", (event) => {
+            let txt = document.getElementById("msg");
+            //接收传输过来的变量数据
+            txt.value = `Name is ${event.data.pName} Age is  ${event.data.pAge}`;
+
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+        <h1>postMessage学习</h1>
+        <input type='text' id='msg' />
+    </form>
+</body>
+
+</html>

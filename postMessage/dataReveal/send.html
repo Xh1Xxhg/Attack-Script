@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script>
+        function openChild() {
+            child = window.open('demo2.html', 'popup', 'height=300px, width=500px');
+        }
+        function sendMessage() {
+            //发送的数据内容
+            let msg = { pName: "jack", pAge: "12" };
+            //发送消息数据数据到任意目标源, *指的是任意anyone
+            child.postMessage(msg, '*');
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <input type='button' id='btnopen' value='Open child' onclick='openChild();' />
+            <input type='button' id='btnSendMsg' value='Send Message' onclick='sendMessage();' />
+        </fieldset>
+    </form>
+</body>
+
+</html>
