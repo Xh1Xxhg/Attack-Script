@@ -1,2 +1,2 @@
 # Introduction
-这是一些涉及web sec & 漏洞挖掘的脚本
+There are some scripts  which involve web sec & vulnerability discovery.
